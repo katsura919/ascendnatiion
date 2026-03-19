@@ -4,7 +4,7 @@ import { Calendar, Clock } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <div className="flex-1 flex flex-col w-full pt-32">
+    <div className="flex-1 flex flex-col w-full pt-28 lg:pt-32 overflow-hidden">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -28,38 +28,37 @@ export function HeroSection() {
         <div className="w-full lg:w-1/2 flex flex-col items-start xl:pr-12 z-20">
           
           {/* Details Box */}
-          <div className="relative inline-block mb-8 px-5 py-2.5 border-2 border-secondary text-secondary font-medium tracking-wide text-sm md:text-base bg-background font-sans uppercase">
+          <div className="relative inline-block mb-6 md:mb-8 px-4 py-2 md:px-5 md:py-2.5 border-2 border-secondary text-secondary font-medium tracking-wide text-xs sm:text-sm md:text-base bg-background font-sans uppercase">
             <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-primary" /> March 21, 2026 &nbsp;|&nbsp; <Clock className="w-5 h-5 ml-1 text-primary" /> 12PM – 1PM EST
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <Calendar className="w-4 h-4 md:w-5 md:h-5 text-primary" /> March 21, 2026 &nbsp;|&nbsp; <Clock className="w-4 h-4 md:w-5 md:h-5 ml-1 text-primary" /> 12PM – 1PM EST
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-foreground font-sans leading-[1.1] mb-8 tracking-tighter">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-foreground font-sans leading-[1.1] mb-6 md:mb-8 tracking-tighter">
             Become <span className="text-primary relative inline-block whitespace-nowrap">
               Magnetic
-              <svg className="absolute w-full h-4 md:h-6 -bottom-2 md:-bottom-3 left-0 text-primary" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <svg className="absolute w-full h-3 sm:h-4 md:h-6 -bottom-1 sm:-bottom-2 md:-bottom-3 left-0 text-primary" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </span><br />
-            to the Life You're Meant For<br />
-            
+            to the Life You're Meant For
           </h1>
 
           {/* Subtitle */}
-          <p className="text-foreground/75 text-lg md:text-xl mb-12 max-w-xl leading-relaxed font-medium">
+          <p className="text-foreground/75 text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-xl leading-relaxed font-medium">
             Learn the 4-Step Manifestation Framework that aligns your energy with money, love, and personal power even if nothing has worked before.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap items-center gap-6">
-            <Link href="/join" className="flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+          <div className="flex flex-wrap items-center gap-4 md:gap-6 w-full sm:w-auto">
+            <Link href="/join" className="flex w-full sm:w-auto justify-center items-center px-6 py-4 sm:px-8 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
               Join the Live Masterclass for Just $27
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-3 shrink-0">
                  <line x1="5" y1="12" x2="19" y2="12"></line>
                  <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -68,7 +67,7 @@ export function HeroSection() {
         </div>
 
         {/* Right Column */}
-        <div className="w-full lg:w-1/2 relative mt-24 lg:mt-0 h-[500px] md:h-[600px] lg:h-[700px] flex justify-center items-end">
+        <div className="w-full lg:w-1/2 relative mt-16 md:mt-24 lg:mt-0 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex justify-center items-end">
           
           {/* Abstract Background Blob - Using a smooth CSS border-radius blob */}
           {/* <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] bg-primary rounded-[60%_40%_30%_70%/60%_30%_70%_40%] -z-10 shadow-2xl"></div> */}
@@ -107,9 +106,9 @@ export function HeroSection() {
           </div> */}
 
           {/* Pointer: Personal Power */}
-          <div className="absolute top-2/3 right-0 lg:-right-4 z-30 translate-y-12">
-              <div className="relative bg-primary text-primary-foreground font-semibold px-6 py-4 rounded-xl rounded-tl-none shadow-xl border-2 border-primary-foreground/10 text-lg">
-                <div className="absolute -top-7 -left-5 w-10 h-10 text-primary fill-primary drop-shadow-md">
+          <div className="absolute top-1/2 md:top-2/3 right-0 lg:-right-4 z-30 translate-y-12 scale-90 sm:scale-100 origin-right">
+              <div className="relative bg-primary text-primary-foreground font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-xl rounded-tl-none shadow-xl border-2 border-primary-foreground/10 text-sm sm:text-lg">
+                <div className="absolute -top-5 -left-4 sm:-top-7 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 text-primary fill-primary drop-shadow-md">
                   <svg viewBox="0 0 24 24" transform="rotate(-15)"><path d="M4 2L20 12L13 14.5L16 22L13 23L9.5 15.5L4 20V2Z" /></svg>
                 </div>
                 Personal Power
@@ -117,9 +116,9 @@ export function HeroSection() {
           </div>
 
           {/* Pointer: Money & Love */}
-          <div className="absolute bottom-20 left-4 lg:-left-8 z-30">
-              <div className="relative bg-secondary text-secondary-foreground font-semibold px-6 py-4 rounded-xl rounded-br-none shadow-xl border-2 border-secondary-foreground/10 text-lg">
-                <div className="absolute -top-6 -right-6 w-10 h-10 text-secondary fill-secondary drop-shadow-md">
+          <div className="absolute bottom-10 sm:bottom-20 left-0 sm:left-4 lg:-left-8 z-30 scale-90 sm:scale-100 origin-left">
+              <div className="relative bg-secondary text-secondary-foreground font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-xl rounded-br-none shadow-xl border-2 border-secondary-foreground/10 text-sm sm:text-lg">
+                <div className="absolute -top-5 -right-5 sm:-top-6 sm:-right-6 w-8 h-8 sm:w-10 sm:h-10 text-secondary fill-secondary drop-shadow-md">
                   <svg viewBox="0 0 24 24" transform="scale(-1, 1) rotate(-15)"><path d="M4 2L20 12L13 14.5L16 22L13 23L9.5 15.5L4 20V2Z" /></svg>
                 </div>
                 Money & Love
@@ -141,26 +140,26 @@ export function HeroSection() {
         {/* The prominent slanted banner */}
         <div className="relative w-[110%] left-[-5%] py-6 bg-primary transform -rotate-2 origin-left shadow-2xl z-30 border-y-4 border-primary-foreground/20">
           <div className="flex whitespace-nowrap overflow-hidden">
-            <div className="flex min-w-full items-center justify-around animate-marquee text-primary-foreground font-bold text-3xl font-heading tracking-wider">
-              <span className="px-8">Manifestation</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Energy Alignment</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Personal Power</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Abundance</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+            <div className="flex min-w-full items-center justify-around animate-marquee text-primary-foreground font-bold text-xl md:text-3xl font-heading tracking-wider">
+              <span className="px-4 md:px-8">Manifestation</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Energy Alignment</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Personal Power</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Abundance</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
             </div>
             {/* Duplicated for seamless loop */}
-            <div className="flex min-w-full items-center justify-around animate-marquee text-primary-foreground font-bold text-3xl font-heading tracking-wider aria-hidden='true'">
-              <span className="px-8">Manifestation</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Energy Alignment</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Personal Power</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
-              <span className="px-8">Abundance</span>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+            <div className="flex min-w-full items-center justify-around animate-marquee text-primary-foreground font-bold text-xl md:text-3xl font-heading tracking-wider aria-hidden='true'">
+              <span className="px-4 md:px-8">Manifestation</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Energy Alignment</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Personal Power</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
+              <span className="px-4 md:px-8">Abundance</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-80 w-6 h-6 md:w-8 md:h-8"><path d="M12 2v20M17 5l-10 14M22 12H2M19 17L5 7" /></svg>
             </div>
           </div>
         </div>
