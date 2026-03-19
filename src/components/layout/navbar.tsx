@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 left-0 w-full z-50 px-6 pt-6 pb-2 bg-gradient-to-b from-background/80 to-transparent pointer-events-none">
+    <div className="fixed top-0 left-0 w-full z-50 px-6 pt-6 pb-2  pointer-events-none">
       <nav className="mx-auto w-[95%] max-w-7xl bg-secondary text-secondary-foreground rounded-full px-6 py-4 flex items-center justify-between shadow-lg pointer-events-auto">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
