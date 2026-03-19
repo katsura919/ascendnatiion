@@ -9,7 +9,7 @@ export function ProblemSection() {
           <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
           <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
           <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
-          The Problem
+          Why You Still Feel Stuck
         </div>
 
         {/* Main Heading */}
