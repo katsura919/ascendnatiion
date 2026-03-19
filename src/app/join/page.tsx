@@ -28,27 +28,38 @@ export default function JoinPage() {
               </div>
             </div>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-6">
               <p className="font-bold text-sm text-primary uppercase tracking-wider">Included Bonuses:</p>
               {[
-                "30-Minute Breakthrough Call ($279 Value)",
-                "5 Organs of Abundance Guidebook ($50 Value)",
-                "Fast-Action Workbook ($47 Value)",
-                "Spiritual Integration Toolkit ($50 Value)"
+                { name: "30-Minute Breakthrough Call", value: "$279 Value" },
+                { name: "5 Organs of Abundance Guidebook", value: "$50 Value" },
+                { name: "Fast-Action Workbook", value: "$47 Value" },
+                { name: "Spiritual Integration Toolkit", value: "$50 Value" }
               ].map((bonus, i) => (
-                <div key={i} className="flex flex-start gap-3 text-sm font-medium text-foreground/80">
-                  <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
-                  <span>{bonus}</span>
+                <div key={i} className="flex flex-start justify-between gap-3 text-sm font-medium text-foreground/80">
+                  <div className="flex gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                    <span>{bonus.name}</span>
+                  </div>
+                  <div className="flex flex-col items-end text-right shrink-0">
+                    <span className="line-through text-foreground/40 text-xs">{bonus.value}</span>
+                    <span className="text-secondary font-bold text-xs uppercase tracking-wide">FREE</span>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="pt-6 border-t border-primary/10 mb-6">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-foreground/70 font-medium">Subtotal</span>
-                <span className="text-foreground/70 font-medium line-through decoration-primary/50">$426.00</span>
+            <div className="pt-6 border-t border-primary/10 mb-6 space-y-3">
+              <div className="flex justify-between items-center text-foreground/80">
+                <span className="font-medium">The 4-Step Masterclass</span>
+                <span className="font-medium">$27.00</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center text-foreground/80">
+                <span className="font-medium">All 4 Bonuses (Value: $426.00)</span>
+                <span className="text-secondary font-extrabold uppercase tracking-wide">FREE</span>
+              </div>
+              
+              <div className="flex justify-between items-center pt-4 mt-2 border-t border-primary/10">
                 <span className="text-xl font-bold text-foreground">Total Today</span>
                 <span className="text-3xl font-extrabold text-primary">$27.00</span>
               </div>
