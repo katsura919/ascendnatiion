@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CoachesSection() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-background overflow-hidden z-10">
+    <section id="coaches" className="relative w-full py-24 md:py-32 bg-background overflow-hidden z-10">
       <div className="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center">
         
         {/* Section Badge */}

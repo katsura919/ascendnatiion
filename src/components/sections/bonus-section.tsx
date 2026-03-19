@@ -30,7 +30,7 @@ export function BonusSection() {
   ];
 
   return (
-    <section className="relative w-full py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden z-10">
+    <section id="bonus" className="relative w-full py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden z-10">
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full blur-[120px]"></div>
@@ -59,7 +59,7 @@ export function BonusSection() {
           {bonuses.map((bonus, idx) => (
             <div 
               key={idx} 
-              className={`group flex flex-col bg-background/5 border border-primary-foreground/10 rounded-3xl overflow-hidden hover:bg-background/10 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl shadow-black/20`}
+              className={`group flex flex-col bg-background border border-primary-foreground/10 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl shadow-black/20`}
             >
               <div className="relative w-full aspect-video bg-primary-foreground/5 overflow-hidden">
                 <Image 
@@ -69,16 +69,16 @@ export function BonusSection() {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 {/* Value Pill overlay */}
-                <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground font-bold font-sans px-4 py-1.5 rounded-full text-sm md:text-base shadow-lg z-10 flex items-center gap-2">
+                <div className="absolute top-4 right-4 bg-background text-primary font-bold font-sans px-4 py-1.5 rounded-full text-sm md:text-base shadow-lg z-10 flex items-center gap-2">
                   <span>Value:</span>
                   <span className="line-through opacity-70">{bonus.value}</span>
-                  <span className="text-background uppercase tracking-wider text-xs ml-1">Included</span>
+                  <span className="text-primary uppercase tracking-wider text-xs ml-1">Included</span>
                 </div>
               </div>
 
               <div className="p-6 md:p-8 flex items-start gap-4">
                 <CheckCircle2 className="w-8 h-8 text-secondary shrink-0 mt-1" strokeWidth={2.5} />
-                <h3 className="text-2xl md:text-3xl font-bold font-sans text-primary-foreground">
+                <h3 className="text-2xl md:text-3xl font-bold font-sans text-primary">
                   {bonus.title}
                 </h3>
               </div>
@@ -109,10 +109,6 @@ export function BonusSection() {
             </p>
           </div>
 
-        </div>
-
-        <div className="mt-12">
-          <ArrowRight className="w-10 h-10 text-secondary animate-bounce mx-auto" strokeWidth={3} />
         </div>
 
       </div>

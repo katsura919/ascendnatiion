@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Calendar, Clock, ChevronDown } from "lucide-react";
 
 export function FinalCtaSection() {
@@ -14,10 +15,38 @@ export function FinalCtaSection() {
       question: "Who is this framework actually for?",
       answer: "This is for anyone who feels like they are doing 'all the right things' (hustling, using vision boards, repeating affirmations) but still feeling stuck. If you know you're meant for more and want a predictable, structural approach to alignment, this is for you.",
     },
+    {
+      question: "I’ve already tried manifestation before. What makes this different?",
+      answer: "Most people are taught techniques before they understand how their energy is actually operating.\n\nThis session focuses on helping you understand the energetic foundation behind your results. Once that foundation becomes clearer, any technique you use becomes more intentional and effective.",
+    },
+    {
+      question: "Do I need to be spiritual to attend?",
+      answer: "No.\n\nYou simply need to be open to understanding yourself and your patterns more deeply. The concepts are explained in a grounded, practical way. You do not need prior experience with manifestation.",
+    },
+    {
+      question: "Is this focused only on business?",
+      answer: "No.\n\nThis session applies to money, relationships, personal growth, emotional balance, and overall life direction. Manifestation is not limited to one area of life. It is connected to how you operate in all areas.",
+    },
+    {
+      question: "Will I receive personalized guidance during the webinar?",
+      answer: "This is a live teaching session where you’ll learn a structured 4-step framework. The goal is to give you clarity and direction so you can begin applying immediately.",
+    },
+    {
+      question: "I feel like I’ve done a lot of inner work already. Is this still relevant for me?",
+      answer: "Yes.\n\nMany people have explored courses, seminars, or retreats. This session helps you connect those experiences into a clearer understanding of how your energy and daily patterns are shaping your results.",
+    },
+    {
+      question: "What if nothing changes for me?",
+      answer: "The first shift is clarity.\n\nWhen you clearly understand why certain patterns repeat, you stop searching blindly. That awareness alone changes how you move forward.",
+    },
+    {
+      question: "How will I feel after this session?",
+      answer: "Most people leave with a sense of clarity, relief, and direction. Instead of wondering what they are missing, they understand what to focus on next.",
+    }
   ];
 
   return (
-    <section className="relative w-full py-24 md:py-32 bg-background overflow-hidden z-10">
+    <section id="join" className="relative w-full py-24 md:py-32 bg-background overflow-hidden z-10">
       <div className="max-w-6xl mx-auto px-6 relative z-20 flex flex-col items-center">
         
         {/* Massive CTA Card */}
@@ -59,14 +88,14 @@ export function FinalCtaSection() {
           </div>
 
           <p className="text-primary-foreground font-bold text-lg md:text-xl tracking-wide uppercase mb-6 animate-pulse">
-            ⚠️ Seats are strictly limited
+            Seats are strictly limited
           </p>
 
-          <button className="group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary bg-white rounded-full shadow-2xl hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 text-lg md:text-2xl font-sans w-full sm:w-auto">
+          <Link href="/join" className="group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary bg-white rounded-full shadow-2xl hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 text-lg md:text-2xl font-sans w-full sm:w-auto">
             Join the Masterclass for Just $27
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" strokeWidth={3} />
             <div className="absolute inset-0 bg-white/20 rounded-full blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity"></div>
-          </button>
+          </Link>
         </div>
 
         {/* FAQ Section */}
@@ -85,7 +114,7 @@ export function FinalCtaSection() {
                   {faq.question}
                   <ChevronDown className="w-6 h-6 text-primary shrink-0 transition-transform duration-300 group-open:-rotate-180" strokeWidth={2.5} />
                 </summary>
-                <div className="px-6 md:px-8 pb-6 md:pb-8 text-foreground/80 text-lg leading-relaxed pt-0">
+                <div className="px-6 md:px-8 pb-6 md:pb-8 text-foreground/80 text-lg leading-relaxed pt-0 whitespace-pre-wrap">
                   {faq.answer}
                 </div>
               </details>

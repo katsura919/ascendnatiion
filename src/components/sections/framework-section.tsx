@@ -2,7 +2,7 @@ import { Target, MapPin, Zap, RefreshCw } from "lucide-react";
 
 export function FrameworkSection() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden z-10">
+    <section id="masterclass" className="relative w-full py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden z-10">
       
       {/* Background patterns */}
       <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-primary-foreground/5 to-transparent pointer-events-none z-0"></div>

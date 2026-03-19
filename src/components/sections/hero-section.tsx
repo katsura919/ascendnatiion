@@ -57,7 +57,7 @@ export function HeroSection() {
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-6">
-            <Link href="#" className="flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <Link href="/join" className="flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
               Join the Live Masterclass for Just $27
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-3">
                  <line x1="5" y1="12" x2="19" y2="12"></line>
